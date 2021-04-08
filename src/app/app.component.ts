@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { PoBreadcrumb, PoMenuItem, PoPageAction } from '@po-ui/ng-components';
 
@@ -10,21 +11,38 @@ import { PoBreadcrumb, PoMenuItem, PoPageAction } from '@po-ui/ng-components';
 export class AppComponent {
   actions:Array<PoPageAction>;
   breadcrumb:PoBreadcrumb={items:[
-    {label:"Início"}
+    {label:"Início"},
+    {label: "Cockpit de Custos"}
   ]}
   itemsMenu:Array<PoMenuItem>=[
-    {label: "Fechamento"},
-    {label: "Pós-Fechamento"}
+    {label: "Pré-Fechamento", subItems:[
+      {label: "Ordens Críticas", link: 'ordens-criticas' },
+      {label: "Listagem Saldo das Ordens", link: 'listagem-saldo-ordens' },
+      {label: "Horas Apropriadas", link: 'horas-apropriadas'},
+      {label: "Termina Ordem Produção", link: 'termina-ordem-producao'}
+    ]},
+    {label: "Fechamento", subItems:[
+      {label: "Cálculo Preço Médio"},
+      {label: "Desatualização Preço Médio"},
+      {label: "Sumário Contábil"},
+      {label: "Contabilização"},
+      {label: "Fechamento do Período"},
+      {label: "Reabertura do Período"}
+    ]},
+    {label: "Pós-Fechamento", subItems:[
+      {label: "Variação Preço Médio"},
+      {label: "Análise de Itens"},
+      {label: "Comparativo Real x Padrão"},
+      {label: "Simulação de Custos"},
+      {label: "Registro Inventário - Processo"},
+      {label: "Resumo Ordens - Serviço"},
+      {label: "Razão Estoque"},
+      {label: "Diário Auxiliar"},
+    ]}
   ]
 
 
-
-  readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) }
-  ];
-
-  private onClick() {
-    alert('Clicked in menu item')
-  }
+  constructor(
+    private router:Router){  }
 
 }

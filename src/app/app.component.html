@@ -1,18 +1,29 @@
-<po-container
-  p-height=42
-  class="po-md-12"
+<div class="po-wrapper">
+<po-navbar
+  p-logo="../assets/logo.png"
+  [p-menu]="menuPrincipal"
+  [p-items]="[
+  {label: 'Sair', link: 'sair'}
+  ]"
 >
-  <p style="font-weight:bold; color:#019abe; font-size:20px" class="po-md-11">TOTVS</p>
-  <a>X sair</a>
-</po-container>
-
-<po-page-default
-  [p-actions]="actions"
-  [p-breadcrumb]="breadcrumb"
+</po-navbar>
+</div>
+<hr>
+<div class=po-wrapper>
+  <po-breadcrumb
+  [p-items]="[
+    { label: 'Início' },
+    { label: 'Cockpit de Custos' }
+  ]"
 >
-<po-menu
+</po-breadcrumb>
+</div>
+<div class="po-wrapper">
+ <po-menu #menuPrincipal
   [p-menus]="itemsMenu"
->
-</po-menu>
-
-</po-page-default>
+  p-collapsed="false"
+ ></po-menu>
+ </div>
+<div class=po-wrapper>
+ <router-outlet></router-outlet>
+</div>
