@@ -10,6 +10,7 @@ import { OrdensCriticasComponent } from './pre-fechamento/ordens-criticas/ordens
 import { ListagemSaldoOrdensComponent } from './pre-fechamento/listagem-saldo-ordens/listagem-saldo-ordens.component';
 import { HorasApropriadasComponent } from './pre-fechamento/horas-apropriadas/horas-apropriadas.component';
 import { TerminaOrdemProducaoComponent } from './pre-fechamento/termina-ordem-producao/termina-ordem-producao.component';
+import { HomeComponent } from './home/home.component'
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TerminaOrdemProducaoComponent } from './pre-fechamento/termina-ordem-pr
     ListagemSaldoOrdensComponent,
     HorasApropriadasComponent,
     TerminaOrdemProducaoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,29 +1,17 @@
-<div class="po-wrapper">
 <po-navbar
   p-logo="../assets/logo.png"
   [p-menu]="menuPrincipal"
-  [p-items]="[
-  {label: 'Sair', link: 'sair'}
+  p-shadow="true"
+  [p-icon-actions]="[
+  {icon: 'po-icon po-icon-close', label: 'Sair', link: 'sair', tooltip: 'Sair'}
   ]"
 >
 </po-navbar>
-</div>
-<hr>
-<div class=po-wrapper>
-  <po-breadcrumb
-  [p-items]="[
-    { label: 'Início' },
-    { label: 'Cockpit de Custos' }
-  ]"
->
-</po-breadcrumb>
-</div>
 <div class="po-wrapper">
  <po-menu #menuPrincipal
+  p-logo="../assets/logo.png"
   [p-menus]="itemsMenu"
-  p-collapsed="false"
+  p-collapsed="true"
  ></po-menu>
- </div>
-<div class=po-wrapper>
  <router-outlet></router-outlet>
 </div>

@@ -38,7 +38,8 @@ export class AppComponent {
       {label: "Resumo Ordens - Serviço"},
       {label: "Razão Estoque"},
       {label: "Diário Auxiliar"},
-    ]}
+    ]},
+    {label: 'Personalizados'}
   ]
 
 
