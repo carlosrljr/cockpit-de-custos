@@ -7,7 +7,8 @@ import { OrdensCriticasComponent } from './pre-fechamento/ordens-criticas/ordens
 import { TerminaOrdemProducaoComponent } from './pre-fechamento/termina-ordem-producao/termina-ordem-producao.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'cockpit-de-custos'},
+  {path: 'cockpit-de-custos', component: HomeComponent},
   {path: 'ordens-criticas', component: OrdensCriticasComponent },
   {path: 'listagem-saldo-ordens', component: ListagemSaldoOrdensComponent},
   {path: 'horas-apropriadas', component: HorasApropriadasComponent},

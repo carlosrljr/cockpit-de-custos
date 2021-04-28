@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { PoBreadcrumb, PoMenuItem, PoPageAction } from '@po-ui/ng-components';
+import { PoMenuItem, PoPageAction } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,7 @@ import { PoBreadcrumb, PoMenuItem, PoPageAction } from '@po-ui/ng-components';
 })
 export class AppComponent {
   actions:Array<PoPageAction>;
-  breadcrumb:PoBreadcrumb={items:[
-    {label:"Início"},
-    {label: "Cockpit de Custos"}
-  ]}
-  itemsMenu:Array<PoMenuItem>=[
+    itemsMenu:Array<PoMenuItem>=[
     {label: "Pré-Fechamento", subItems:[
       {label: "Ordens Críticas", link: 'ordens-criticas' },
       {label: "Listagem Saldo das Ordens", link: 'listagem-saldo-ordens' },

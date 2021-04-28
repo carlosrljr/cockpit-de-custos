@@ -1,13 +1,67 @@
-<po-page-default>
-  <po-container>
-    <po-radio-group
-  name="fechamentoRadio"
-  p-label="Fechamento"
-  [p-options]="[
-    { label: 'Único', value: '1' },
-    { label: 'Estabelecimento', value: '2' }
-  ]"
->
-</po-radio-group>
+<po-page-default
+  [p-breadcrumb]="breadcrumb">
 
-</po-container>
+  <po-container>
+
+    <div class="po-row">
+      <po-radio-group
+      name="fechamentoRadio"
+      p-columns=2
+      p-label="Fechamento:"
+      [p-options]="[
+      { label: 'Único', value: '1' },
+      { label: 'Estabelecimento', value: '2' }
+      ]"
+      >
+      </po-radio-group>
+    </div>
+
+    <div class="po-row">
+      <po-lookup
+        class="po-md-3"
+        p-label= "Sigla Estabelecimento"
+        name="SiglaEstabelecimento"
+        p-field-label="label"
+        p-field-value="value"
+        [p-filter-service]='estabelecimentoJson'
+      ></po-lookup>
+
+      <po-lookup
+        class="po-md-9"
+        p-label= "Nome Estabelecimento"
+        name="NomeEstabelecimento"
+        p-disabled="true"
+      ></po-lookup>
+    </div>
+
+    <div class="po-row">
+      <po-datepicker
+        p-label="Data Início"
+        class="po-md-6"
+      ></po-datepicker>
+      <po-datepicker
+        p-label="Data Início"
+        class="po-md-6"
+      ></po-datepicker>
+    </div>
+
+    <div class="po-row" class="po-md-12">
+      <po-checkbox-group
+        [p-options]="options"
+        p-columns=3
+      ></po-checkbox-group>
+    </div>
+
+  </po-container>
+
+  <hr />
+
+  <po-chart
+    class="po-md-6"
+  ></po-chart>
+
+  <po-chart
+  class="po-md-6"
+></po-chart>
+
+</po-page-default>

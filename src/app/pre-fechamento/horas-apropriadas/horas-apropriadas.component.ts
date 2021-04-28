@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PoBreadcrumb } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-horas-apropriadas',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horas-apropriadas.component.css']
 })
 export class HorasApropriadasComponent implements OnInit {
+  breadcrumb:PoBreadcrumb={
+    items:[
+    {label: 'Início', link:'../cockpit-de-custos'},
+    {label: 'Horas Apropriadas'}
+    ]
+  }
 
   constructor() { }
 

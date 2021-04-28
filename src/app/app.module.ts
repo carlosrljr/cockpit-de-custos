@@ -11,6 +11,7 @@ import { ListagemSaldoOrdensComponent } from './pre-fechamento/listagem-saldo-or
 import { HorasApropriadasComponent } from './pre-fechamento/horas-apropriadas/horas-apropriadas.component';
 import { TerminaOrdemProducaoComponent } from './pre-fechamento/termina-ordem-producao/termina-ordem-producao.component';
 import { HomeComponent } from './home/home.component'
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component'
     RouterModule.forRoot([]),
     PoNavbarModule,
     BrowserAnimationsModule,
-    PoBreadcrumbModule
+    PoBreadcrumbModule,
+    HttpClientModule
 
   ],
   providers: [],

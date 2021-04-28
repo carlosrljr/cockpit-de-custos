@@ -1,0 +1,16 @@
+{
+  "estabelecimentos":[
+    {
+      "sigla": "mtb",
+      "nome": "estab projeto murilo"
+    },
+    {
+      "sigla": "es2",
+      "nome": "exemplo"
+    },
+    {
+      "sigla":"000",
+      "nome": "final 0"
+    }
+  ]
+}
